@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @newspost.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @newspost.content %>
+</p>
+
+<p>
+  <strong>View count:</strong>
+  <%= @newspost.view_count %>
+</p>
+
+<p>
+  <strong>User,news:</strong>
+  <%= @newspost.user,news_id %>
+</p>
+
+<%= link_to 'Edit', edit_newspost_path(@newspost) %> |
+<%= link_to 'Back', newsposts_path %>

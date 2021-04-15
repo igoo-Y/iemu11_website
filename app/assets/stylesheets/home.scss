@@ -1,0 +1,121 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+/* main-box */
+
+.main-container {
+  width: 1024px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-banner {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  display: flex;
+  border-top: 3px solid black;
+}
+
+.img {
+  width: 700px;
+  height: 360px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.txt {
+  width: 324px;
+  height: 300px;
+  background: white;
+  padding: 30px;
+  color: black;
+  font-weight: 300;
+  border-bottom: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb;
+  font-size: 14px;
+}
+
+/* news */
+
+.news-line,
+.video-line,
+.photo-line,
+.mid-line {
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.news {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.notice {
+  border: 1px solid #ebebeb;
+  width: 310px;
+  height: 300px;
+}
+
+.training {
+  border: 1px solid #ebebeb;
+  width: 310px;
+  height: 300px;
+}
+
+.volunteer {
+  border: 1px solid #ebebeb;
+  width: 310px;
+  height: 300px;
+}
+
+.next-match {
+  border: 1px solid #ebebeb;
+  width: 1024px;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+/* photo */
+
+.photo {
+  display: flex;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.photo-main {
+  border: 1px solid #ebebeb;
+  width: 496px;
+  height: 331px;
+}
+
+.photo-aside {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 526px;
+}
+
+.photo-aside-item {
+  border: 1px solid #ebebeb;
+  width: 250px;
+  height: 164px;
+  margin-left: 10px;
+}
+
+/* video */
+
+.video {
+  width: 1024px;
+  height: 330px;
+  border: 1px solid #ebebeb;
+  margin-bottom: 40px;
+}

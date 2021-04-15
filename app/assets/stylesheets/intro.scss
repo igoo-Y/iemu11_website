@@ -1,0 +1,180 @@
+// Place all the styles related to the Intros controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.menu-bar {
+  width: 100%;
+  height: 100px;
+  border-bottom: 2px solid #1049bb;
+  margin-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 40px;
+  color: #0a3c9b;
+}
+
+h2 {
+  color: #091e58;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.menu-title {
+  margin-top: 0;
+}
+
+.menu-list {
+  display: flex;
+  width: 1024px;
+  margin: 0;
+}
+
+.menu-list-item {
+  font-size: 16px;
+  font-weight: bold;
+  color: #091e58;
+  padding-right: 40px;
+  text-decoration: none;
+}
+
+.intro-img {
+  border: 1px solid #ebebeb;
+  height: 500px;
+  margin-bottom: 30px;
+}
+
+/* history */
+
+.history-tab {
+  width: 100%;
+  overflow: hidden;
+  border-left: 1px solid #0a3c9b;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.history-tab li.current {
+  background: #0a3c9b;
+  color: #ebebeb;
+}
+
+.history-tab li {
+  width: 50%;
+  height: 40px;
+  line-height: 38px;
+  float: left;
+  text-align: center;
+  border-top: 1px solid #0a3c9b;
+  border-bottom: 1px solid #0a3c9b;
+  border-right: 1px solid #0a3c9b;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0a3c9b;
+}
+
+.history_tab li.current a {
+  color: white;
+}
+
+.history_tab li a {
+  display: block;
+  color: #0a3c9b;
+}
+
+.history-wrap {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ebebeb;
+  padding: 35px;
+  margin-bottom: 50px;
+}
+
+.history-txt {
+  padding-bottom: 20px;
+}
+
+.history-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  padding: 35px 0;
+  border-top: 4px solid #0a3c9b;
+  border-bottom: 1px solid #ababab;
+}
+
+.history-list {
+  border: 1px solid #ebebeb;
+  width: 330px;
+  height: 250px;
+  text-align: center;
+}
+
+/* partner */
+
+#official-partner,
+#sponsor {
+  font-weight: 400;
+  text-align: center;
+  line-height: 36px;
+  background-color: #0a3c9b;
+  color: #ebebeb;
+  width: 100%;
+}
+
+.op-sponsor {
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 100px;
+}
+
+.os-sponsor {
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 100px;
+}
+
+.op-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.op-img {
+  width: 300px;
+}
+
+#op-smu {
+ width: 250px;
+}
+
+.os-img {
+  width: 300px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#os-safyou,
+#os-kangcafe,
+#os-redhyang {
+  width: 250px;
+}

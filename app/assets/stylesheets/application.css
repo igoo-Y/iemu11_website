@@ -1,0 +1,153 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* nav-bar */
+nav {
+    width: 100%;
+    background-color: #0a3c9b;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container {
+    display: flex;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-item-list {
+    display: flex;
+    width: 880px;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffff;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-item {
+    cursor: pointer;
+}
+
+.nav-item a {
+    text-align: center;
+    text-decoration: none;
+    color:azure;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.logo {
+    font-size: 20px;
+    text-decoration: none;
+    color: azure;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.img-logo {
+    width: 60px;
+    height: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+/* partners */
+
+.partners-list {
+    list-style: none;
+    display: flex;
+    width: 1024px;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partners-section {
+    border-top: 1px solid #ebebeb;
+    width: 1024px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partner-logo {
+    height: 35px;
+    width: 100px;
+}
+
+#smu {
+    height: 30px;
+    width: 100px;
+}
+
+a {
+    background-color: transparent;
+}
+
+img {
+    border-style: none;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+    background-color: #0a3c9b;
+    font-weight: 300;
+    color: #F8F8FF;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.address {
+    font-size: 12px;
+    margin: 0;
+    padding-bottom: 3px;
+}
+
+.email {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.copyright {
+    font-size: 14px;
+}

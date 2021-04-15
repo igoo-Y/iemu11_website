@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEMU11</title>
+    <link rel="stylesheet" href="homes.scss">
+    <title>Iemu11</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+  <!--nav-bar-->
+    <nav>
+      <div class="nav-container">
+        <a class="logo" href="<%=root_path%>"><img class="img-logo" src="<%=asset_path 'logo.png' %>">IEMU11</a>
+        <ul class="nav-item-list">
+          <li class="nav-item"><a href="/intro/intro">소개</a></li>
+          <li class="nav-item"><a href="news#index">소식</a></li>
+          <li class="nav-item"><a href="">경기</a></li>
+          <li class="nav-item"><a href="">선수단</a></li>
+          <li class="nav-item"><a href="">봉사</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <%= yield %>
+
+  <!--파트너 로고-->
+    <section class="partners-section" aria-label="List of partners">
+      <ul class="partners-list">
+        <li class="partners-list-item">
+          <a class="partners-list-link" href="http://www.smu.ac.kr" target="_blank" rel="noopener">
+            <img id="smu" class="partner-logo" src="<%=asset_path 'logo/logo_smu.png' %>" alt="상명대학교">
+          </a>
+        </li>
+
+        <li class="partners-list-item">
+          <a class="partners-list-link" href="http://smu-lincplus.ac.kr/" target="_blank" rel="noopener">
+            <img class="partner-logo" src="<%=asset_path 'logo/logo_linkplus.png' %>" alt="상명대학교 링크사업단">
+          </a>
+        </li>
+
+        <li class="partners-list-item">
+          <a class="partners-list-link" href="http://www.hwelfare.or.kr/" target="_blank" rel="noopener">
+            <img class="partner-logo" src="<%=asset_path 'logo/logo_hongeun.png' %>" alt="홍은종합사회복지관">
+          </a>
+        </li>
+
+        <li class="partners-list-item">
+          <a class="partners-list-link" href="#" target="_blank" rel="noopener">
+            <img class="partner-logo" src="<%=asset_path 'logo/logo_plan100.png' %>" alt="플랜100">
+          </a>
+        </li>
+
+        <li class="partners-list-item">
+          <a class="partners-list-link" href="http://hongjongho.com/" target="_blank" rel="noopener">
+            <img class="partner-logo" src="<%=asset_path 'logo/logo_hongphoto.png' %>" alt="홍종호닷컴">
+          </a>
+        </li>
+
+        <li class="partners-list-item">
+          <a class="partners-list-link" href="https://theninetyplus.com/" target="_blank" rel="noopener">
+            <img class="partner-logo" src="<%=asset_path 'logo/logo_90plus.png' %>" alt="나인티플러스">
+          </a>
+        </li>
+
+        <li class="partners-list-item">
+          <a class="partners-list-link" href="https://www.instagram.com/cafe_kang/" target="_blank" rel="noopener">
+            <img class="partner-logo" src="<%=asset_path 'logo/logo_kangcafe.png' %>" alt="강카페">
+          </a>
+        </li>
+
+        <li class="partners-list-item">
+          <a class="partners-list-link" href="#" target="_blank" rel="noopener">
+            <img class="partner-logo" src="<%=asset_path 'logo/logo_redhyang.png' %>" alt="코난이네 레드향">
+          </a>
+        </li>
+
+        <li class="partners-list-item">
+          <a class="partners-list-link" href="#" target="_blank" rel="noopener">
+            <img class="partner-logo" src="<%=asset_path 'logo/logo_safyou.png' %>" alt="safyou">
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  <!--footer-->
+    <footer>
+      <p class="address">서울특별시 종로구 홍지동 홍지문2길 20, 상명대학교 학생회관 3층 IEMU11</p>
+      <p class="email">대표 연락처 iemu11.official@hmail.com</p>
+      <p class="copyright">Copyrigth IEMU11 ALL rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<%=render 'menu' %>
+
+<div class="main-container">
+<table class="news-normal">
+  <thead>
+    <tr>
+      <th>번호</th>
+      <th>제목</th>
+      <th>작성자</th>
+      <th>조회</th>
+      <th>작성일</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @news.each do |news| %>
+      <tr>
+        <td><%= news.id %></td>
+        <td><%= link_to news.title, news %></td>
+        <td><%= news.user_id %></td>
+        <td><%= news.view_count %></td>
+        <td><%= news.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New News', new_news_path %>
+
+</div>
