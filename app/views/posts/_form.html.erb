@@ -1,0 +1,39 @@
+<div class="main-container">
+  <%= form_with(model: @board.present? ? [@post.board, @post] : @post, local: true) do |form| %>
+
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+        <ul>
+          <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :board_title, '카테고리' %>
+      <%= form.collection_select :board_title, Board.all, :id, :title, prompt: true %>
+    </div>
+
+    <div class="field">
+      <%= form.label :title, '제목'%>
+      <%= form.text_field :title %>
+    </div>
+
+    <div class="field">
+      <%= form.label :content, '내용' %>
+      <%= form.text_area :content %>
+    </div>
+
+    <div class="field">
+      <%= form.label :view_count, '조회수' %>
+      <%= form.number_field :view_count %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit '작성' %>
+    </div>
+  <% end %>
+</div>

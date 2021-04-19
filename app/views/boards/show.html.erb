@@ -1,0 +1,36 @@
+<%= render 'menu' %>
+
+<div class="main-container">
+  <h2><%= @board.title %></h2>
+
+  <table class="board-normal">
+    <thead>
+    <tr>
+      <th>제목</th>
+      <th>내용</th>
+      <th>작성자</th>
+      <th>조회수</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @board.posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.content %></td>
+        <td><%= post.user_id %></td>
+        <td><%= post.view_count %></td>
+        <td><%= link_to '열기', post %></td>
+        <td><%= link_to '수정', edit_post_path(post) %></td>
+        <td><%= link_to '삭제', board_post_path(id: post.id, board_id: post.board_id), method: :delete, data: { confirm: 'Are you sure boardshow?' } %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to '새 글 쓰기', new_board_post_path(board_id: @board.id) %>
+
+</div>

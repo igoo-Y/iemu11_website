@@ -1,0 +1,30 @@
+// Place all the styles related to the Boards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.board-normal {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.board-normal thead {
+  background: #0a3c9b;
+  border-bottom: 6px solid #f1f2f3;
+  color: #ebebeb;
+  line-height: 36px;
+}
+
+th {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+tr {
+  display: table-row;
+}

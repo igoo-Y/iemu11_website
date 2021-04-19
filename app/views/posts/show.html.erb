@@ -1,0 +1,25 @@
+<%= render 'menu' %>
+
+<div class="main-container">
+  <h2><%= @board.title rescue '이름없음'%></h2>
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>제목:</strong>
+    <%= @post.title %>
+  </p>
+
+  <p>
+    <strong>내용:</strong>
+    <%= @post.content %>
+  </p>
+
+  <p>
+    <strong>조회수:</strong>
+    <%= @post.view_count %>
+  </p>
+
+  <%= link_to '수정', edit_post_path(@post) %> |
+  <%= link_to '뒤로가기', (@board.present? ? board_posts_path(@board) : posts_path) %>
+</div>
