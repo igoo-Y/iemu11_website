@@ -1,21 +1,20 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
-  before_action :set_board
+  # before_action :set_board
 
   # GET /posts or /posts.json
   def index
-    @posts = @board.present? ? @board.posts.all : Post.all
+    @posts = Post.all
   end
 
   # GET /posts/1 or /posts/1.json
   def show
     @post = Post.find(params[:id])
-    # @board = Board.find(params[:board_id])
   end
 
   # GET /posts/new
   def new
-    @post = @board.present? ? @board.posts.new : Post.new
+    @post = Post.new
   end
 
   # GET /posts/1/edit
@@ -25,12 +24,12 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-    @post = @board.present? ? @board.posts.new(post_params) : Post.new(post_params)
+    @post = Post.new(post_params)
     @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to (@board.present? ? [@post.board, @post] : @post), notice: "Post was successfully created." }
+        format.html { redirect_to board_path(@post.board_id), notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -45,7 +44,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to (@board.present? ? [@post.board, @post] : @post), notice: "Post was successfully updated." }
+        format.html { redirect_to board_path(@post.board_id), notice: "Post was successfully updated." }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -61,7 +60,7 @@ class PostsController < ApplicationController
     @post.destroy
     respond_to do |format|
       format.html {
-        redirect_to board_posts_path(board_id: @board.id), notice: "Post was successfully destroyed." }
+        redirect_to board_path(@post.board_id), notice: "Post was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -74,12 +73,12 @@ class PostsController < ApplicationController
     end
   end
 
-  def set_board
-    @board = Board.find(params[:board_id]) if params[:board_id].present?
-  end
+  # def set_board
+  #   @board = Board.find(params[:board_id]) if params[:board_id].present?
+  # end
 
   # Only allow a list of trusted parameters through.
   def post_params
-    params.require(:post).permit(:title, :content, :board_id)
+    params.require(:post).permit(:title, :content, :board_id, :user_id)
   end
 end

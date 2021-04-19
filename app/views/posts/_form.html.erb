@@ -1,5 +1,5 @@
 <div class="main-container">
-  <%= form_with(model: @board.present? ? [@post.board, @post] : @post, local: true) do |form| %>
+  <%= form_with(model: @post, local: true) do |form| %>
 
     <% if @post.errors.any? %>
       <div id="error_explanation">
@@ -30,6 +30,11 @@
     <div class="field">
       <%= form.label :view_count, '조회수' %>
       <%= form.number_field :view_count %>
+    </div>
+
+    <div class="field">
+      <%= form.label :board_id%>
+      <%= form.text_field :board_id %>
     </div>
 
     <div class="actions">

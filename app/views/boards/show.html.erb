@@ -23,7 +23,7 @@
         <td><%= post.view_count %></td>
         <td><%= link_to '열기', post %></td>
         <td><%= link_to '수정', edit_post_path(post) %></td>
-        <td><%= link_to '삭제', board_post_path(id: post.id, board_id: post.board_id), method: :delete, data: { confirm: 'Are you sure boardshow?' } %></td>
+        <td><%= link_to '삭제', board_post_path(id: post.id, board_id: @board.id), method: :delete, data: { confirm: 'Are you sure boardshow?' } %></td>
       </tr>
     <% end %>
     </tbody>

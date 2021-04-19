@@ -21,45 +21,6 @@ ActiveRecord::Schema.define(version: 2021_04_18_053829) do
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
 
-  create_table "homes", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.integer "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_homes_on_user_id"
-  end
-
-  create_table "intros", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.integer "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_intros_on_user_id"
-  end
-
-  create_table "news", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.integer "view_count"
-    t.integer "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_news_on_user_id"
-  end
-
-  create_table "notices", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.integer "view_count"
-    t.integer "news_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
-    t.index ["news_id"], name: "index_notices_on_news_id"
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"

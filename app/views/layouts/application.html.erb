@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IEMU11</title>
-    <link rel="stylesheet" href="homes.scss">
-    <title>Iemu11</title>
+    <link rel="stylesheet" href="/application.css">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -21,7 +21,7 @@
         <a class="logo" href="<%=root_path%>"><img class="img-logo" src="<%=asset_path 'logo.png' %>">IEMU11</a>
         <ul class="nav-item-list">
           <li class="nav-item"><a href="/intro/intro">소개</a></li>
-          <li class="nav-item"><a href="/boards/1">소식</a></li>
+          <li class="nav-item"><a href="/boards">소식</a></li>
           <li class="nav-item"><a href="">경기</a></li>
           <li class="nav-item"><a href="">선수단</a></li>
           <li class="nav-item"><a href="">봉사</a></li>
@@ -30,6 +30,15 @@
     </nav>
 
     <%= yield %>
+
+    <div class="main-container">
+      <% if user_signed_in? %>
+        <%=current_user.email %>
+        <%= link_to '로그아웃', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to '로그인', new_user_session_path %>
+      <% end %>
+    </div>
 
   <!--파트너 로고-->
     <section class="partners-section" aria-label="List of partners">

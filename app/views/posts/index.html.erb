@@ -1,5 +1,5 @@
 <div class="main-container">
-  <p id="notice"><%= notice %></p>
+
 
   <table class="post-normal">
     <thead>
@@ -19,7 +19,7 @@
           <td><%= post.view_count %></td>
           <td><%= link_to '열기', post %></td>
           <td><%= link_to '수정', edit_post_path(post) %></td>
-          <td><%= link_to '삭제', board_post_path(id: post.id, board_id: @board.id), method: :delete, data: { confirm: 'Are you sure post?' } %></td>
+<!--          <td><%#= link_to '삭제', board_post_path(post.id, board_id: @board.id), method: :delete, data: { confirm: 'Are you sure post?' } %></td>-->
         </tr>
       <% end %>
     </tbody>
