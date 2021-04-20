@@ -1,0 +1,34 @@
+<%= render 'menu' %>
+
+<div class="main-container">
+  <h2>자원봉사 모집</h2>
+
+  <table>
+    <thead>
+    <tr>
+      <th>제목</th>
+      <th>내용</th>
+      <th>조회수</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @volunteers.each do |volunteer| %>
+      <tr>
+        <td><%= volunteer.title %></td>
+        <td><%= volunteer.content %></td>
+        <td><%= volunteer.view_count %></td>
+        <td><%= link_to 'Show', volunteer %></td>
+        <td><%= link_to 'Edit', edit_volunteer_path(volunteer) %></td>
+        <td><%= link_to 'Destroy', volunteer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Volunteer', new_volunteer_path %>
+
+</div>

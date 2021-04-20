@@ -1,0 +1,62 @@
+<%= form_with(model: table, local: true) do |form| %>
+  <% if table.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(table.errors.count, "error") %> prohibited this table from being saved:</h2>
+
+      <ul>
+        <% table.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :rank %>
+    <%= form.number_field :rank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_name %>
+    <%= form.text_field :team_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :match_count %>
+    <%= form.number_field :match_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :point %>
+    <%= form.number_field :point %>
+  </div>
+
+  <div class="field">
+    <%= form.label :win_count %>
+    <%= form.number_field :win_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :draw_count %>
+    <%= form.number_field :draw_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lose_count %>
+    <%= form.number_field :lose_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score_count %>
+    <%= form.number_field :score_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lost_count %>
+    <%= form.number_field :lost_count %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

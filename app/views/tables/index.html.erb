@@ -1,0 +1,48 @@
+<%=render 'menu' %>
+
+<div class="main-container">
+  <h2>순위표</h2>
+
+  <table>
+    <thead>
+    <tr>
+      <th>순위</th>
+      <th>팀 이름</th>
+      <th>경기 수</th>
+      <th>승점</th>
+      <th>승</th>
+      <th>무</th>
+      <th>패</th>
+      <th>득점</th>
+      <th>실점</th>
+      <th>최근 5경기</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @tables.each do |table| %>
+      <tr>
+        <td><%= table.rank %></td>
+        <td><%= table.team_name %></td>
+        <td><%= table.match_count %></td>
+        <td><%= table.point %></td>
+        <td><%= table.win_count %></td>
+        <td><%= table.draw_count %></td>
+        <td><%= table.lose_count %></td>
+        <td><%= table.score_count %></td>
+        <td><%= table.lost_count %></td>
+        <td><%= table.recent_form %></td>
+        <td><%= link_to 'Show', table %></td>
+        <td><%= link_to 'Edit', edit_table_path(table) %></td>
+        <td><%= link_to 'Destroy', table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Table', new_table_path %>
+
+</div>

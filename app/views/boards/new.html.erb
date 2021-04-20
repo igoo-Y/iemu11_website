@@ -1,5 +1,10 @@
-<h1>New Board</h1>
+<%= render 'menu' %>
 
-<%= render 'form', board: @board %>
+<div class="main-container">
+  <h1>New Board</h1>
 
-<%= link_to 'Back', boards_path %>
+  <%= render 'form', board: @board %>
+
+  <%= link_to 'Back', boards_path %>
+</div>
+

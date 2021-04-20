@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :boards
   has_many :posts
+  has_many :matches
+  has_many :volunteers
 end

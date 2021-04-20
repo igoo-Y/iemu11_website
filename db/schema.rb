@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_18_053829) do
+ActiveRecord::Schema.define(version: 2021_04_20_052017) do
 
   create_table "boards", force: :cascade do |t|
     t.string "title"
@@ -19,6 +19,69 @@ ActiveRecord::Schema.define(version: 2021_04_18_053829) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_boards_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.integer "view_count"
+    t.integer "board_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["board_id"], name: "index_events_on_board_id"
+  end
+
+  create_table "homes", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_homes_on_user_id"
+  end
+
+  create_table "intros", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_intros_on_user_id"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "time"
+    t.string "place"
+    t.string "score"
+    t.string "opponent"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_matches_on_user_id"
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.integer "view_count"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_news_on_user_id"
+  end
+
+  create_table "notices", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.integer "view_count"
+    t.integer "news_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["news_id"], name: "index_notices_on_news_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -30,6 +93,22 @@ ActiveRecord::Schema.define(version: 2021_04_18_053829) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.index ["board_id"], name: "index_posts_on_board_id"
+  end
+
+  create_table "tables", force: :cascade do |t|
+    t.integer "rank"
+    t.string "team_name"
+    t.integer "match_count"
+    t.integer "point"
+    t.integer "win_count"
+    t.integer "draw_count"
+    t.integer "lose_count"
+    t.integer "score_count"
+    t.integer "lost_count"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "recent_form"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,9 +123,20 @@ ActiveRecord::Schema.define(version: 2021_04_18_053829) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "volunteers", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "view_count"
+    t.integer "user_id"
+  end
+
   add_foreign_key "boards", "users"
+  add_foreign_key "events", "boards"
   add_foreign_key "homes", "users"
   add_foreign_key "intros", "users"
+  add_foreign_key "matches", "users"
   add_foreign_key "news", "users"
   add_foreign_key "notices", "news"
   add_foreign_key "posts", "boards"

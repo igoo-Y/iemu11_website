@@ -1,0 +1,43 @@
+<%= render 'menu' %>
+
+<div class="main-container">
+
+  <h2>일정 및 결과</h2>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Time</th>
+      <th>Place</th>
+      <th>Score</th>
+      <th>Opponent</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @matches.each do |match| %>
+      <tr>
+        <td><%= match.title %></td>
+        <td><%= match.content %></td>
+        <td><%= match.time %></td>
+        <td><%= match.place %></td>
+        <td><%= match.score %></td>
+        <td><%= match.opponent %></td>
+        <td><%= match.user_id %></td>
+        <td><%= link_to 'Show', match %></td>
+        <td><%= link_to 'Edit', edit_match_path(match) %></td>
+        <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Match', new_match_path %>
+
+</div>

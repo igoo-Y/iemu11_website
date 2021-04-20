@@ -1,0 +1,43 @@
+<%= render 'menu' %>
+
+<div class="main-container">
+  <p>
+    <strong>Title:</strong>
+    <%= @match.title %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= @match.content %>
+  </p>
+
+  <p>
+    <strong>Time:</strong>
+    <%= @match.time %>
+  </p>
+
+  <p>
+    <strong>Place:</strong>
+    <%= @match.place %>
+  </p>
+
+  <p>
+    <strong>Score:</strong>
+    <%= @match.score %>
+  </p>
+
+  <p>
+    <strong>Opponent:</strong>
+    <%= @match.opponent %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= @match.user_id %>
+  </p>
+
+  <%= link_to 'Edit', edit_match_path(@match) %> |
+  <%= link_to 'Back', matches_path %>
+
+</div>
+
