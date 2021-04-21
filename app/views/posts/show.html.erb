@@ -3,11 +3,13 @@
 <div class="main-container">
   <h2><%= @post.board.title %></h2>
 
-
-  <p>
-    <strong>제목:</strong>
+  <h2 class="post-title">
     <%= @post.title %>
-  </p>
+  </h2>
+
+  <span><%= @post.user_id %></span>
+
+  <div class="mid-line"></div>
 
   <p>
     <strong>내용:</strong>
@@ -20,5 +22,6 @@
   </p>
 
   <%= link_to '수정', edit_post_path(@post) %> |
+  <%= link_to '삭제', post_path(@post), method: :delete, data: { confirm: '게시물을 삭제하시겠습니까?' }%> |
   <%= link_to '뒤로가기', board_path(@post.board_id) %>
 </div>

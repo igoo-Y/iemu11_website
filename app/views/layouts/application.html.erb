@@ -11,7 +11,7 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <script src="https://kit.fontawesome.com/0f8a57db5f.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -23,7 +23,7 @@
           <li class="nav-item"><a href="/intro/intro">소개</a></li>
           <li class="nav-item"><a href="/boards/1">소식</a></li>
           <li class="nav-item"><a href="/matches">경기</a></li>
-          <li class="nav-item"><a href="">선수단</a></li>
+          <li class="nav-item"><a href="/members">선수단</a></li>
           <li class="nav-item"><a href="/volunteer/activity">봉사</a></li>
         </ul>
       </div>
@@ -33,7 +33,7 @@
 
     <div class="main-container">
       <% if user_signed_in? %>
-        <%=current_user.email %>
+        <%=current_user.user_name %>
         <%= link_to '로그아웃', destroy_user_session_path, method: :delete %>
       <% else %>
         <%= link_to '로그인', new_user_session_path %>
@@ -101,9 +101,32 @@
 
   <!--footer-->
     <footer>
-      <p class="address">서울특별시 종로구 홍지동 홍지문2길 20, 상명대학교 학생회관 3층 IEMU11</p>
-      <p class="email">대표 연락처 iemu11.official@hmail.com</p>
-      <p class="copyright">Copyright IEMU11 ALL rights reserved.</p>
+      <div class="main-footer">
+        <ul class="sns-list">
+          <li class="sns-list-item">
+            <a class="sns-icon youtube" href="https://www.youtube.com/channel/UCpq4QCYACaqv_9m_TO-IkdQ" target="_blank" rel="noopener">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="sns-list-item">
+            <a class="sns-icon" href="https://www.facebook.com/IEMU11/" target="_blank" rel="noopener">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </li>
+          <li class="sns-list-item">
+            <a class="sns-icon" href="https://www.instagram.com/iemu11/" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+
+        <div class="address">서울특별시 종로구 홍지동 홍지문2길 20, 상명대학교 학생회관 3층 IEMU11</div>
+        <div class="email">Iemu11.official@gmail.com</div>
+        <div class="footer-float-wrap">
+          <div class="copyright">Copyright IEMU11 ALL rights reserved.</div>
+          <div class="iemu11">IEMU11 since 2011</div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

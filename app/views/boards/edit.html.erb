@@ -1,6 +1,10 @@
-<h1>Editing Board</h1>
+<%= render 'menu' %>
 
-<%= render 'form', board: @board %>
+<div class="main-container">
+  <h2>게시판 수정</h2>
 
-<%= link_to 'Show', @board %> |
-<%= link_to 'Back', boards_path %>
+  <%= render 'form', board: @board %>
+
+  <%= link_to 'Show', @board %> |
+  <%= link_to 'Back', boards_path %>
+</div>

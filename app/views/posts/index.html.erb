@@ -2,7 +2,7 @@
 
 <div class="main-container">
 
-  <h2>공지사항</h2>
+  <h2>게시물</h2>
   <table class="post-normal">
     <thead>
       <tr>
@@ -29,6 +29,7 @@
 
   <br>
 
-  <%= link_to '새 글 쓰기', new_post_path %>
-
+  <div class="float-wrap">
+  <%= link_to '새 글 쓰기', new_post_path, class: "new-btn" %>
+  </div>
 </div>

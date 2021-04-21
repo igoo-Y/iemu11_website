@@ -1,0 +1,23 @@
+<%= render 'menu' %>
+
+<div class="main-container">
+
+  <p>
+    <strong>Name:</strong>
+    <%= @member.name %>
+  </p>
+
+  <p>
+    <strong>Back number:</strong>
+    <%= @member.back_number %>
+  </p>
+
+  <p>
+    <strong>Position:</strong>
+    <%= @member.position %>
+  </p>
+
+  <%= link_to 'Edit', edit_member_path(@member) %> |
+  <%= link_to 'Back', members_path %>
+</div>
+

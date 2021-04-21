@@ -7,5 +7,7 @@ class User < ApplicationRecord
   has_many :boards
   has_many :posts
   has_many :matches
+  has_many :members
+  has_many :tables
   has_many :volunteers
 end

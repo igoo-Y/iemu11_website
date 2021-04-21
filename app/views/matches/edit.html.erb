@@ -1,6 +1,11 @@
-<h1>Editing Match</h1>
+<%=render 'menu' %>
 
-<%= render 'form', match: @match %>
+<div class="main-container">
+  <h1>경기 결과 및 일정 수정</h1>
 
-<%= link_to 'Show', @match %> |
-<%= link_to 'Back', matches_path %>
+  <%= render 'form', match: @match %>
+
+  <%= link_to 'Show', @match %> |
+  <%= link_to '뒤로가기', matches_path %>
+</div>
+

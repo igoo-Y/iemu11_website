@@ -1,7 +1,9 @@
+<%= render 'menu' %>
+
 <div class="main-container">
   <h1>새 글 작성</h1>
 
   <%= render 'form', post: @post %>
 
-  <%= link_to '뒤로가기', board_posts_path %>
+  <%= link_to '뒤로가기', :back %>
 </div>

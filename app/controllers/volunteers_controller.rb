@@ -22,6 +22,7 @@ class VolunteersController < ApplicationController
   # POST /volunteers or /volunteers.json
   def create
     @volunteer = Volunteer.new(volunteer_params)
+    @volunteer.user_id = current_user.id
 
     respond_to do |format|
       if @volunteer.save

@@ -34,6 +34,19 @@ a {
     text-decoration: none;
 }
 
+.new-btn {
+    display: inline-block;
+    float: right;
+    background-color: #0a3c9b;
+    color: #ebebeb;
+    padding: 10px 15px 10px 15px;
+    font-size: 12px;
+}
+
+.float-wrap {
+    overflow: hidden;
+}
+
 /* nav-bar */
 nav {
     width: 100%;
@@ -128,26 +141,56 @@ img {
 /* footer */
 
 footer {
-    text-align: center;
     background-color: #0a3c9b;
     font-weight: 300;
     color: #F8F8FF;
-    padding-top: 30px;
-    padding-bottom: 15px;
+    padding-top: 60px;
+    padding-bottom: 20px;
 }
 
-.address {
-    font-size: 12px;
-    margin: 0;
-    padding-bottom: 3px;
+.main-footer {
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sns-list {
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+
+.sns-icon {
+    text-decoration: none;
+    font-size: 26px;
+    color: #ebebeb;
+    margin-right: 10px;
+}
+
+.youtube {
+    font-size: 30px;
+}
+
+.address,
+.email,
+.copyright {
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .email {
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
+    margin-bottom: 20px;
 }
 
-.copyright {
+.copyright{
+    float: left;
+}
+
+.iemu11 {
     font-size: 14px;
+    float: right;
+}
+
+.footer-float-wrap {
+    overflow: hidden;
 }

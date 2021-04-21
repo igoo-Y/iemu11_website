@@ -40,8 +40,6 @@
   font-size: 14px;
 }
 
-/* news */
-
 .news-line,
 .video-line,
 .photo-line,
@@ -52,6 +50,17 @@
   letter-spacing: 5px;
 }
 
+.line-box {
+  background-color: #0a3c9b;
+  padding: 10px 40px 10px 40px;
+  color: #ebebeb;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  text-align: center;
+}
+
+/* news */
 .news {
   display: flex;
   justify-content: space-between;

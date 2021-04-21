@@ -1,6 +1,10 @@
-<h1>Editing Table</h1>
+<%= render 'menu' %>
 
-<%= render 'form', table: @table %>
+<div class="main-container">
+  <h1>Editing Table</h1>
 
-<%= link_to 'Show', @table %> |
-<%= link_to 'Back', tables_path %>
+  <%= render 'form', table: @table %>
+
+  <%= link_to 'Show', @table %> |
+  <%= link_to 'Back', tables_path %>
+</div>
