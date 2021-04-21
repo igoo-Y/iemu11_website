@@ -1,5 +1,5 @@
 <div class="main-container">
-  <%= form_with(model: @post, local: true) do |form| %>
+  <%= form_with(model: @board.present? ? [@post.board, @post] : @post, local: true) do |form| %>
 
     <% if @post.errors.any? %>
       <div id="error_explanation">

@@ -19,9 +19,9 @@
           <td><%= post.title %></td>
           <td><%= post.content %></td>
           <td><%= post.view_count %></td>
-          <td><%= link_to '열기', post %></td>
-          <td><%= link_to '수정', edit_post_path(post) %></td>
-          <td><%= link_to '삭제', post, method: :delete, data: { confirm: 'Are you sure post?' } %></td>
+          <td><%= link_to '열기', (@board.present? ? [post.board, post] : post) %></td>
+          <td><%= link_to '수정', (@board.present? ? edit_board_post_path(post.board, post) : edit_post_path(post)) %></td>
+          <td><%= link_to '삭제', (@board.present? ? [post.board, post] : post), method: :delete, data: { confirm: 'Are you sure post?' } %></td>
         </tr>
       <% end %>
     </tbody>
@@ -30,6 +30,6 @@
   <br>
 
   <div class="float-wrap">
-  <%= link_to '새 글 쓰기', new_post_path, class: "new-btn" %>
+  <%= link_to '새 글 쓰기', (@board.present? ?  new_board_post_path(@board) : new_post_path), class: "new-btn" %>
   </div>
 </div>
