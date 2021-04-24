@@ -14,11 +14,13 @@
 
 .main-banner {
   width: 1024px;
+  height: 361px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
   display: flex;
   border-top: 3px solid black;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,0.2);
 }
 
 .img {
@@ -40,12 +42,20 @@
   font-size: 14px;
 }
 
+.txt h3 {
+  font-size: 22px;
+}
+
+.txt h2 {
+  margin-bottom: 20px;
+}
+
 .news-line,
 .video-line,
 .photo-line,
 .mid-line {
   border-bottom: 1px solid #ebebeb;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
@@ -58,6 +68,7 @@
   margin-right: auto;
   width: 100px;
   text-align: center;
+  margin-top: 50px;
 }
 
 /* news */
@@ -68,19 +79,38 @@
 }
 
 .notice {
-  border: 1px solid #ebebeb;
   width: 310px;
   height: 300px;
 }
 
+.card-img {
+  width: 310px;
+  height: 220px;
+}
+
+.card-post {
+  margin-top: 5px;
+}
+
+.card-content {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card-category {
+  text-decoration: none;
+  color: #696b6d;
+}
+
 .training {
-  border: 1px solid #ebebeb;
   width: 310px;
   height: 300px;
 }
 
 .volunteer {
-  border: 1px solid #ebebeb;
   width: 310px;
   height: 300px;
 }
@@ -89,7 +119,9 @@
   border: 1px solid #ebebeb;
   width: 1024px;
   height: 300px;
+  margin-top: 40px;
   margin-bottom: 15px;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,0.2);
 }
 
 /* photo */
@@ -125,6 +157,12 @@
 .video {
   width: 1024px;
   height: 330px;
-  border: 1px solid #ebebeb;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,0.2);
   margin-bottom: 40px;
+  margin-top: 50px;
+}
+
+.img-video {
+  width: 1024px;
+  height: 330px;
 }

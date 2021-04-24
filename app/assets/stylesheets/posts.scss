@@ -29,6 +29,11 @@ tr {
   display: table-row;
 }
 
+td a {
+  text-decoration: none;
+  color: black;
+}
+
 .post-title {
   text-align: center;
   font-size: 28px;
