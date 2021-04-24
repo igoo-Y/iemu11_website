@@ -6,13 +6,6 @@
   width: 100%;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  table-layout: fixed;
-}
-
 .post-normal thead {
   background: #0a3c9b;
   border-bottom: 6px solid #f1f2f3;
@@ -27,6 +20,10 @@ th {
 
 tr {
   display: table-row;
+}
+
+.table-news {
+  border-bottom: 1px solid #ebebeb;
 }
 
 td a {

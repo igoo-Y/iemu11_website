@@ -3,7 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 table {
-  border-spacing: 0 20px;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 30px;
 }
 
 .board-normal thead {
@@ -20,7 +24,6 @@ table {
 
 .board-normal tr {
   display: table-row;
-  border: 1px solid #ebebeb;
 }
 
 .board-normal tbody tr td {

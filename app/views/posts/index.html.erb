@@ -15,7 +15,7 @@
 
     <tbody>
       <% @posts.each do |post| %>
-        <tr>
+        <tr class="table-news">
           <td><%= post.title %></td>
           <td><%= post.content %></td>
           <td><%= post.view_count %></td>
@@ -27,6 +27,7 @@
     </tbody>
   </table>
 
+  <%= paginate @posts %>
   <br>
 
   <div class="float-wrap">
