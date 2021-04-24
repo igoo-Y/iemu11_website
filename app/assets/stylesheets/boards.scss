@@ -8,6 +8,7 @@ table {
   width: 100%;
   table-layout: fixed;
   margin-bottom: 30px;
+  border-bottom: 10px solid #0a3c9b;
 }
 
 .board-normal thead {
@@ -19,7 +20,7 @@ table {
 .board-normal th {
   font-weight: 400;
   font-size: 13px;
-  height: 50px;
+  height: 40px;
 }
 
 .board-normal tr {
