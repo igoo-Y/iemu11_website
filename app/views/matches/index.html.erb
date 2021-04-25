@@ -4,37 +4,24 @@
 
   <h2>일정 및 결과</h2>
 
-  <table>
-    <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Time</th>
-      <th>Place</th>
-      <th>Score</th>
-      <th>Opponent</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-    </thead>
 
-    <tbody>
     <% @matches.each do |match| %>
-      <tr>
-        <td><%= match.title %></td>
-        <td><%= match.content %></td>
-        <td><%= match.time %></td>
-        <td><%= match.place %></td>
-        <td><%= match.score %></td>
-        <td><%= match.opponent %></td>
-        <td><%= match.user_id %></td>
-        <td><%= link_to 'Show', match %></td>
-        <td><%= link_to 'Edit', edit_match_path(match) %></td>
-        <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="match-box">
+      <div class="match-time-place">
+        <div class="match-time"><%= match.time %></div>
+        <div class="match-place"><%= match.place %></div>
+      </div>
+
+      <div class="match-score"><%= match.score %></div>
+      <div class="match-opponent"><%= match.opponent %></div>
+      <%= link_to 'Show', match %>
+      <%= link_to 'Edit', edit_match_path(match) %>
+      <%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
     <% end %>
-    </tbody>
-  </table>
+
+
+
 
   <br>
   <div class="float-wrap">
