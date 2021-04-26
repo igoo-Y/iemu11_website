@@ -6,21 +6,31 @@
 
 
     <% @matches.each do |match| %>
-    <div class="match-box">
-      <div class="match-time-place">
-        <div class="match-time"><%= match.time %></div>
-        <div class="match-place"><%= match.place %></div>
+      <div class="m-s-box">
+        <div class="m-s-01">
+          <div class="m-title"><%= match.title %></div>
+        </div>
+        <div class="m-s-02">
+          <div class="m-time"><%= match.time %></div>
+          <div class="m-place"><%= match.place %></div>
+        </div>
+        <div class="m-s-03">
+          <ul>
+            <li class="m-name">IEMU11</li>
+            <li class="emb"><img class="m-logo-iemu11" src="<%= asset_path 'logo.png' %>" alt=""></li>
+            <li class="score"><p><%= match.score %></p></li>
+            <li class="emb"><img class="m-logo" src="<%=asset_path 'shield.png' %>" alt=""></li>
+            <li class="m-name"><%= match.opponent %></li>
+          </ul>
+        </div>
+        <div class="m-s-04">
+          <a href=""><span>경기리뷰</span></a>
+        </div>
       </div>
-
-      <div class="match-score"><%= match.score %></div>
-      <div class="match-opponent"><%= match.opponent %></div>
       <%= link_to 'Show', match %>
       <%= link_to 'Edit', edit_match_path(match) %>
       <%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
     <% end %>
-
-
 
 
   <br>

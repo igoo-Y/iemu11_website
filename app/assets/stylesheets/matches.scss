@@ -1,7 +1,7 @@
 // Place all the styles related to the Matches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.match-box {
+.m-s-box {
   width: 1024px;
   height: 150px;
   border-top: 1px solid #ebebeb;
@@ -9,8 +9,43 @@
   display: flex;
 }
 
-.match-time-place {
-  color: #091e58;
-  font-weight: 500;
+.m-logo {
+  width: 65px;
+}
+
+.m-logo-iemu11 {
+  width: 100px;
+}
+
+.m-s-01 {
+  width: 15%;
+  align-items: center;
+  text-align: center;
+}
+
+.m-s-02 {
+  width: 25%;
+  align-items: center;
+  text-align: center;
+}
+
+.m-s-03 {
+  width: 50%;
+  text-align: center;
+}
+
+.m-s-03 ul {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+
+.m-s-03 li {
+  padding-left: 30px;
   font-size: 18px;
+}
+
+.m-s-04 {
+  width: 10%;
 }
