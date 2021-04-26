@@ -3,14 +3,17 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .m-s-box {
   width: 1024px;
-  height: 150px;
+  height: 130px;
   border-top: 1px solid #ebebeb;
   padding: 10px;
-  display: flex;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
 }
 
 .m-logo {
-  width: 65px;
+  width: 62px;
 }
 
 .m-logo-iemu11 {
@@ -19,14 +22,16 @@
 
 .m-s-01 {
   width: 15%;
-  align-items: center;
   text-align: center;
 }
 
 .m-s-02 {
-  width: 25%;
-  align-items: center;
+  width: 20%;
   text-align: center;
+}
+
+.m-place {
+  font-size: 14px;
 }
 
 .m-s-03 {
@@ -38,14 +43,26 @@
   width: 100%;
   display: flex;
   margin: 0;
+  justify-content: center;
   align-items: center;
 }
 
 .m-s-03 li {
-  padding-left: 30px;
-  font-size: 18px;
+  font-size: 22px;
+  padding-left: 25px;
+}
+
+.m-name {
+  font-weight: bold;
+}
+
+.score p {
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 4px;
 }
 
 .m-s-04 {
-  width: 10%;
+  width: 15%;
+  text-align: center;
 }
