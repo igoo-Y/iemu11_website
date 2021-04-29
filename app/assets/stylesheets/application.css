@@ -67,6 +67,7 @@ nav {
 }
 
 .nav-item-list {
+    float: left;
     display: flex;
     width: 880px;
     justify-content: space-around;
