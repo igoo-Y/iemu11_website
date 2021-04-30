@@ -38,25 +38,20 @@ table {
 
 .board-normal th:first-child,
 .board-normal td:first-child {
-  width: 10%;
+  width: 75%;
 }
 
 .board-normal th:nth-child(2),
 .board-normal td:nth-child(2) {
-  width: 45%;
+  width: 10%;
 }
 
 .board-normal th:nth-child(3),
 .board-normal td:nth-child(3) {
-  width: 15%;
+  width: 10%;
 }
 
 .board-normal th:nth-child(4),
 .board-normal td:nth-child(4) {
-  width: 15%;
-}
-
-.board-normal th:nth-child(5),
-.board-normal td:nth-child(5) {
   width: 15%;
 }

@@ -6,7 +6,6 @@
   <table class="board-normal">
     <thead>
     <tr>
-      <th>번호</th>
       <th>제목</th>
       <th>작성자</th>
       <th>조회수</th>
@@ -15,19 +14,18 @@
     </thead>
 
     <tbody>
-    <% @board.posts.each do |post| %>
+    <% @board.posts.order("created_at DESC").each do |post| %>
       <tr>
-        <td><%= post.id %></td>
         <td><%= link_to post.title, board_post_path(id: post.id, board_id: @board.id) %></td>
         <td><%= post.user_name %></td>
         <td><%= post.view_count %></td>
-        <td><%= post.created_at.strftime("%Y-%m-%d") %></td>
+        <td><%= post.created_at.strftime("%Y.%m.%d") %></td>
       </tr>
     <% end %>
     </tbody>
   </table>
 
-
+  <%= paginate @posts %>
 
   <br>
   <div class="float-wrap">

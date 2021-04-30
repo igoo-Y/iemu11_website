@@ -4,7 +4,7 @@
 
 .menu-bar {
   width: 100%;
-  height: 100px;
+  height: 180px;
   border-bottom: 2px solid #1049bb;
   margin-bottom: 80px;
   padding-top: 40px;
@@ -14,6 +14,7 @@
 
 .menu {
   width: 1024px;
+  margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -51,7 +52,7 @@ h2 {
 .intro-img {
   border: 1px solid #ebebeb;
   height: 500px;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 /* history */
@@ -112,7 +113,7 @@ h2 {
   overflow: hidden;
   padding: 35px 0;
   border-top: 4px solid #0a3c9b;
-  border-bottom: 1px solid #ababab;
+  margin-bottom: 80px;
 }
 
 .history-list {

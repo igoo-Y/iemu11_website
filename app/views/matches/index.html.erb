@@ -5,7 +5,7 @@
   <h2>일정 및 결과</h2>
 
 
-    <% @matches.each do |match| %>
+    <% @matches.order("created_at DESC").each do |match| %>
       <div class="m-s-box">
         <div class="m-s-01">
           <div class="m-title"><%= match.title %></div>

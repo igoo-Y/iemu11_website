@@ -1,5 +1,6 @@
 class BoardsController < ApplicationController
   before_action :set_board, only: %i[ show edit update destroy ]
+  # before_action :set_post
 
   # GET /boards or /boards.json
   def index
@@ -8,6 +9,7 @@ class BoardsController < ApplicationController
 
   # GET /boards/1 or /boards/1.json
   def show
+    @posts = Post.page(params[:page])
   end
 
   # GET /boards/new
@@ -62,6 +64,10 @@ class BoardsController < ApplicationController
     def set_board
       @board = Board.find(params[:id])
     end
+
+    # def set_post
+    #   @post = Post.find(params[:id])
+    # end
 
     # Only allow a list of trusted parameters through.
     def board_params
