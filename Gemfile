@@ -6,6 +6,7 @@ ruby '2.7.2'
 gem 'devise'
 gem 'font-awesome-sass', '~> 5.15.1'
 gem 'kaminari'
+gem 'carrierwave', '~> 2.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use sqlite3 as the database for Active Record
