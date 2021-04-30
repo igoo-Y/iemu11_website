@@ -16,43 +16,98 @@
 
   <body>
   <!--nav-bar-->
-    <nav>
-      <div class="nav-container">
-        <a class="logo" href="<%=root_path%>"><img class="img-logo" src="<%=asset_path 'logo.png' %>">IEMU11</a>
-        <ul class="nav-item-list">
-          <li class="nav-item"><a href="/intro/intro">소개</a>
-<!--            <ul class="nav-sub">-->
-<!--              <li class="nav-sub-list"><a href="/intro/intro">인사말 및 조직도</a></li>-->
-<!--              <li class="nav-sub-list"><a href="/intro/rules">회칙 및 행동강령</a></li>-->
-<!--              <li class="nav-sub-list"><a href="/intro/history">역사</a></li>-->
-<!--              <li class="nav-sub-list"><a href="/intro/slogan">슬로건 및 앰블럼</a></li>-->
-<!--              <li class="nav-sub-list"><a href="/intro/partner">파트너</a></li>-->
-<!--            </ul>-->
-          </li>
-          <li class="nav-item"><a href="/boards/1">소식</a>
-<!--            <ul class="nav-sub">-->
-<!--              <li class="nav-sub-list"><a href="/boards/1">공지사항</a></li>-->
-<!--              <li class="nav-sub-list"><a href="/boards/7">이벤트</a></li>-->
-<!--              <li class="nav-sub-list"><a href="/boards/8">언론보도</a></li>-->
-<!--            </ul>-->
-          </li>
-          <li class="nav-item"><a href="/matches">경기</a>
-            <ul class="nav-sub">
-              <li class="nav-sub-list"><a href="/matches">일정 및 결과</a></li>
-              <li class="nav-sub-list"><a href="/tables">순위</a></li>
+      <div class="nav-menu">
+        <div class="nav-menu-inner">
+          <div class="logo"><a href="<%=root_path%>"><img class="img-logo" src="<%=asset_path 'logo.png' %>">IEMU11</a></div>
+          <nav id="gnb">
+            <ul>
+              <li><a href="/intro/intro">소개</a>
+                <ul>
+                  <li><a href="/intro/intro">인사말 및 조직도</a></li>
+                  <li><a href="/intro/rules">회칙 및 행동강령</a></li>
+                  <li><a href="/intro/history">역사</a></li>
+                  <li><a href="/intro/slogan">슬로건 및 앰블럼</a></li>
+                  <li><a href="/intro/partner">파트너</a></li>
+                </ul>
+              </li>
+              <li><a href="/boards/1">소식</a>
+                <ul>
+                  <li><a href="/boards/1">공지사항</a></li>
+                  <li><a href="/boards/7">이벤트</a></li>
+                  <li><a href="/boards/8">언론보도</a></li>
+                </ul>
+              </li>
+              <li><a href="/matches">경기</a>
+                <ul>
+                  <li><a href="/matches">일정 및 결과</a></li>
+                  <li><a href="/tables">순위</a></li>
+                </ul>
+              </li>
+              <!--          <li class="nav-item"><a href="/members">선수단</a></li>-->
+              <li><a href="/volunteer/activity">봉사</a>
+                <ul>
+                  <li><a href="/volunteer/activity">봉사소개</a></li>
+                  <li><a href="/volunteer/volunteer_history">역대활동</a></li>
+                  <li><a href="/volunteers">자원봉사모집</a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-<!--          <li class="nav-item"><a href="/members">선수단</a></li>-->
-          <li class="nav-item"><a href="/volunteer/activity">봉사</a>
-<!--            <ul class="nav-sub">-->
-<!--              <li class="nav-sub-list"><a href="/volunteer/activity">봉사소개</a></li>-->
-<!--              <li class="nav-sub-list"><a href="/volunteer/volunteer_history">역대활동</a></li>-->
-<!--              <li class="nav-sub-list"><a href="/volunteers">자원봉사모집</a></li>-->
-<!--            </ul>-->
-          </li>
-        </ul>
+          </nav>
+<!--          <div class="nav-cafe"><a href="https://cafe.naver.com/iemu11"></a>네이버카페</div>-->
+        </div>
       </div>
-    </nav>
+
+<!--  <div class="menu">-->
+<!--    <div class="menu_inner">-->
+<!--      <div class="logo"><h1 id="logo"><a href="">logo</a></h1></div> -->
+<!--      <nav id="gnb">-->
+<!--        <ul>-->
+<!--          <li>-->
+<!--            <a href="">depth1</a>-->
+<!--            <ul>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="">depth1</a>-->
+<!--            <ul>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="">depth1</a>-->
+<!--            <ul>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="">depth1</a>-->
+<!--            <ul>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="">depth1</a>-->
+<!--            <ul>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--              <li><a href="">depth2</a></li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </nav>-->
+<!--      <div class="sns">sns</div> -->
+<!--    </div>-->
+<!--  </div>-->
 
     <%= yield %>
 
