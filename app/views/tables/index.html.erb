@@ -42,7 +42,9 @@
   </table>
 
   <br>
+  <% if user_signed_in? %>
+    <%= link_to 'New Table', new_table_path, class: 'new-btn' %>
+  <% end %>
 
-  <%= link_to 'New Table', new_table_path %>
 
 </div>
