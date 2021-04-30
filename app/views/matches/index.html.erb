@@ -4,7 +4,6 @@
 
   <h2>일정 및 결과</h2>
 
-
     <% @matches.order("created_at DESC").each do |match| %>
       <div class="m-s-box">
         <div class="m-s-01">
@@ -29,15 +28,21 @@
           </a>
         </div>
       </div>
-      <%= link_to 'Show', match %>
-      <%= link_to 'Edit', edit_match_path(match) %>
-      <%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+      <% if user_signed_in? %>
+        <%= link_to 'Show', match %>
+        <%= link_to 'Edit', edit_match_path(match) %>
+        <%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+
     <% end %>
 
 
   <br>
   <div class="float-wrap">
-    <%= link_to 'New Match', new_match_path, class: "new-btn" %>
+    <% if user_signed_in? %>
+      <%= link_to 'New Match', new_match_path, class: "new-btn" %>
+    <% end %>
   </div>
 
 </div>

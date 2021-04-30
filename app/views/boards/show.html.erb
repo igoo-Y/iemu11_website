@@ -31,7 +31,9 @@
 
   <br>
   <div class="float-wrap">
-    <%= link_to '새 글 쓰기', new_board_post_path(board_id: @board.id), class: "new-btn" %>
+    <% if user_signed_in? %>
+      <%= link_to '새 글 쓰기', new_board_post_path(board_id: @board.id), class: "new-btn" %>
+    <%  end %>
   </div>
 
 </div>
