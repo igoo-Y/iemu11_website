@@ -1,16 +1,29 @@
 <%= render 'menu' %>
 
 <div class="main-container">
-  <p>
-    <strong>Title:</strong>
-    <%= @volunteer.title %>
-  </p>
+  <h2><%= @volunteer.title %></h2>
 
-  <p>
-    <strong>Content:</strong>
+  <h2 class="post-title">
+    <%= @volunteer.title %>
+  </h2>
+
+  <span class="post-user-name"><%= @volunteer.user %></span>
+  <span>
+    <% if user_signed_in? %>
+      <%= link_to '수정', edit_volunteer_path %> |
+      <%= link_to '삭제', @volunteer, method: :delete, data: { confirm: '게시물을 삭제하시겠습니까?' }%>
+    <%end %>
+  </span>
+
+  <div class="float-wrap">
+    <p class="post-time-view"><%= @volunteer.created_at.strftime("%Y-%m-%d") %> , 조회수 <%= @volunteer.view_count.to_i %></p>
+    <p class="post-list"><%= link_to '목록', volunteers_path %></p>
+  </div>
+
+  <div class="post-mid-line"></div>
+
+  <p class="post-content">
     <%= @volunteer.content %>
   </p>
 
-  <%= link_to 'Edit', edit_volunteer_path(@volunteer) %> |
-  <%= link_to 'Back', volunteers_path %>
 </div>

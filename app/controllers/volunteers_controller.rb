@@ -8,6 +8,7 @@ class VolunteersController < ApplicationController
 
   # GET /volunteers/1 or /volunteers/1.json
   def show
+    @volunteer.increment!(:view_count)
   end
 
   # GET /volunteers/new
@@ -73,6 +74,6 @@ class VolunteersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def volunteer_params
-      params.require(:volunteer).permit(:title, :content)
+      params.require(:volunteer).permit(:title, :content, :view_count, :user_id)
     end
 end

@@ -125,11 +125,10 @@ p {
     width: 150px;
 }
 
-/*#gnb > ul > li:hover > a,*/
-/*#gnb > ul > li > a:focus {*/
-/*    text-decoration: underline;*/
-/*    color: #ebebeb;*/
-/*}*/
+#gnb > ul > li:hover > a,
+#gnb > ul > li > a:focus {
+    color: white;
+}
 
 /*#gnb > ul > li > a::after {*/
 /*    content: "";*/
@@ -158,12 +157,12 @@ p {
     display: block;
     line-height: 35px;
     font-size: 14px;
-    color: #ebebeb;
+    color: #DADADA;
 }
 
 #gnb li ul a:hover,
 #gnb li ul a:focus {
-    text-decoration: underline;
+    color: white;
 }
 
 .img-logo {

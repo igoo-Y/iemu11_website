@@ -6,22 +6,22 @@
   <table class="board-normal">
     <thead>
     <tr>
+      <th>번호</th>
       <th>제목</th>
-      <th>내용</th>
+      <th>작성자</th>
       <th>조회수</th>
-      <th colspan="3"></th>
+      <th>작성일</th>
     </tr>
     </thead>
 
     <tbody>
-    <% @volunteers.each do |volunteer| %>
+    <% @volunteers.order("created_at DESC").each do |volunteer| %>
       <tr>
-        <td><%= volunteer.title %></td>
-        <td><%= volunteer.content %></td>
+        <td><%= volunteer.id %></td>
+        <td><%= link_to volunteer.title, volunteer %></td>
+        <td><%= volunteer.user %></td>
         <td><%= volunteer.view_count %></td>
-        <td><%= link_to 'Show', volunteer %></td>
-        <td><%= link_to 'Edit', edit_volunteer_path(volunteer) %></td>
-        <td><%= link_to 'Destroy', volunteer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= volunteer.created_at.strftime("%Y.%m.%d") %></td>
       </tr>
     <% end %>
     </tbody>
