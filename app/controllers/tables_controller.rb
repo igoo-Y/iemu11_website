@@ -22,6 +22,7 @@ class TablesController < ApplicationController
   # POST /tables or /tables.json
   def create
     @table = Table.new(table_params)
+    @table.user_id = current_user.id
 
     respond_to do |format|
       if @table.save
@@ -36,6 +37,8 @@ class TablesController < ApplicationController
 
   # PATCH/PUT /tables/1 or /tables/1.json
   def update
+    @table.user_id = current_user.id
+
     respond_to do |format|
       if @table.update(table_params)
         format.html { redirect_to @table, notice: "Table was successfully updated." }
@@ -64,6 +67,6 @@ class TablesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def table_params
-      params.require(:table).permit(:rank, :team_name, :match_count, :point, :win_count, :draw_count, :lose_count, :score_count, :lost_count)
+      params.require(:table).permit(:rank, :team_name, :match_count, :point, :win_count, :draw_count, :lose_count, :score_count, :lost_count, :recent_form, :user_id)
     end
 end

@@ -1,13 +1,17 @@
 <%=render 'menu' %>
 
 <div class="main-container">
-  <h2>순위</h2>
+  <div class="league">
+    <img class="k7-logo" src="<%=asset_path 'k7_logo.png' %>" alt="">
+    <span class="league-txt">K7 서초권역리그</span>
+  </div>
 
-  <table>
+
+  <table class="rank">
     <thead>
     <tr>
       <th>순위</th>
-      <th>팀 이름</th>
+      <th>팀명</th>
       <th>경기 수</th>
       <th>승점</th>
       <th>승</th>
@@ -23,7 +27,7 @@
     <tbody>
     <% @tables.each do |table| %>
       <tr>
-        <td><%= table.rank %></td>
+        <td><%= link_to table.rank, table %></td>
         <td><%= table.team_name %></td>
         <td><%= table.match_count %></td>
         <td><%= table.point %></td>

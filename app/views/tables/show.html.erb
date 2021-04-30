@@ -46,7 +46,13 @@
     <%= @table.lost_count %>
   </p>
 
-  <%= link_to 'Edit', edit_table_path(@table) %> |
+  <p>
+    <strong>Recent form:</strong>
+    <%= @table.recent_form %>
+  </p>
+
+  <%= link_to 'Edit', edit_table_path(@table) %>
+  <%= link_to 'Destroy', @table, method: :delete, data: { confirm: 'Are you sure?' } %> |
   <%= link_to 'Back', tables_path %>
 
 </div>

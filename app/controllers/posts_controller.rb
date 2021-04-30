@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = @board.present? ? @board.posts.all : Post.all
-    @posts = @board.present? ? @board.posts.page(params[:page]) : Post.page(params[:page])
+    @posts = @board.present? ? @board.posts.page(params[:page]).per(5) : Post.page(params[:page]).per(5)
   end
 
   # GET /posts/1 or /posts/1.json
