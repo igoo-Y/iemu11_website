@@ -3,24 +3,23 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 table {
-  border-collapse: separate;
-  border-spacing: 0 10px;
+  border-collapse: collapse;
+  border-spacing: 0;
   width: 100%;
   table-layout: fixed;
   margin-bottom: 30px;
-  border-bottom: 10px solid #0a3c9b;
+  border-top: 3px solid #2f3133;
 }
 
 .board-normal thead {
-  background: #0a3c9b;
-  color: #ebebeb;
-  line-height: 36px;
+  color: #2f3133;
+  line-height: 45px;
 }
 
 .board-normal th {
-  font-weight: 400;
-  font-size: 13px;
-  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  height: 45px;
 }
 
 .board-normal tr {
@@ -29,21 +28,23 @@ table {
 
 .board-normal tbody tr td {
   line-height: 18px;
+  font-size: 14px;
   height: 50px;
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: #2f3133;
+  border-top: 0.5px solid #ebebeb;
 }
 
 .board-normal th:first-child,
 .board-normal td:first-child {
-  width: 75%;
+  width: 10%;
 }
 
 .board-normal th:nth-child(2),
 .board-normal td:nth-child(2) {
-  width: 10%;
+  width: 55%;
 }
 
 .board-normal th:nth-child(3),
@@ -53,5 +54,10 @@ table {
 
 .board-normal th:nth-child(4),
 .board-normal td:nth-child(4) {
+  width: 10%;
+}
+
+.board-normal th:nth-child(5),
+.board-normal td:nth-child(5) {
   width: 15%;
 }

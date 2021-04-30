@@ -37,6 +37,8 @@ class VolunteersController < ApplicationController
 
   # PATCH/PUT /volunteers/1 or /volunteers/1.json
   def update
+    @volunteer.user_id = current_user.id
+
     respond_to do |format|
       if @volunteer.update(volunteer_params)
         format.html { redirect_to @volunteer, notice: "Volunteer was successfully updated." }

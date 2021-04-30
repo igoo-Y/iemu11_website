@@ -12,7 +12,7 @@
     <tr>
       <th>순위</th>
       <th>팀명</th>
-      <th>경기 수</th>
+      <th>경기수</th>
       <th>승점</th>
       <th>승</th>
       <th>무</th>
@@ -20,7 +20,6 @@
       <th>득점</th>
       <th>실점</th>
       <th>최근 5경기</th>
-      <th colspan="3"></th>
     </tr>
     </thead>
 
@@ -28,7 +27,7 @@
     <% @tables.each do |table| %>
       <tr>
         <td><%= link_to table.rank, table %></td>
-        <td><%= table.team_name %></td>
+        <td><span class="team-name"><%= table.team_name %></span></td>
         <td><%= table.match_count %></td>
         <td><%= table.point %></td>
         <td><%= table.win_count %></td>
@@ -37,9 +36,6 @@
         <td><%= table.score_count %></td>
         <td><%= table.lost_count %></td>
         <td><%= table.recent_form %></td>
-        <td><%= link_to 'Show', table %></td>
-        <td><%= link_to 'Edit', edit_table_path(table) %></td>
-        <td><%= link_to 'Destroy', table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
     </tbody>

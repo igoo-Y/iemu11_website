@@ -17,24 +17,32 @@
   margin-left: 10px;
 }
 
-table {
-  border-collapse: separate;
-  border-spacing: 0 10px;
+.rank {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-bottom: 1px solid #696b6d;
+  border-top: 1px solid #696b6d;
   width: 100%;
   table-layout: fixed;
   margin-bottom: 30px;
+  margin-top: 50px;
 }
 
 .rank thead {
-  background: #0a3c9b;
-  color: #ebebeb;
-  line-height: 36px;
+
 }
 
 .rank th {
-  font-weight: 400;
+  height: 36px;
+  border-top: 1px solid #696b6d;
+  border-bottom: 1px solid #696b6d;
+  color: #696b6d;
   font-size: 13px;
-  height: 40px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
 }
 
 .rank tr {
@@ -47,4 +55,21 @@ table {
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
+  color: #2f3133;
+  font-size: 14px;
+  border-top: 0.5px solid #ebebeb;
+}
+
+.rank th:nth-child(2),
+.rank td:nth-child(2) {
+  width: 25%;
+}
+
+.rank th:nth-child(10),
+.rank td:nth-child(10) {
+  width: 10%;
+}
+
+.team-name {
+  font-size: 16px;
 }
