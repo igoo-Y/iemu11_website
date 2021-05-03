@@ -15,7 +15,7 @@
     </thead>
 
     <tbody>
-    <% @board.posts.order("created_at DESC").each do |post| %>
+    <% @board.posts.order("created_at DESC").page(params[:page]).each do |post| %>
       <tr>
         <td><%= post.id %></td>
         <td><%= link_to post.title, board_post_path(id: post.id, board_id: @board.id) %></td>
