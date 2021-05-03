@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :members
-  resources :tables
   root 'home#index'
 
   #intro routes
@@ -24,6 +22,9 @@ Rails.application.routes.draw do
   resources :volunteers
   get '/volunteer/activity', to: 'volunteers#activity'
   get '/volunteer/volunteer_history', to: 'volunteers#volunteer_history'
+
+  resources :members
+  resources :tables
 
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
