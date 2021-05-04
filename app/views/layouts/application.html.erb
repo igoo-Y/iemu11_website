@@ -59,15 +59,6 @@
 
     <%= yield %>
 
-    <div class="main-container">
-      <% if user_signed_in? %>
-        <%=current_user.user_name %>
-        <%= link_to '로그아웃', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to '로그인', new_user_session_path %>
-      <% end %>
-    </div>
-
   <!--파트너 로고-->
     <section class="partners-section" aria-label="List of partners">
       <ul class="partners-list">
@@ -151,6 +142,14 @@
         <div class="address">서울특별시 종로구 홍지동 홍지문2길 20, 상명대학교 학생회관 3층 IEMU11</div>
         <div class="email">Iemu11.official@gmail.com</div>
         <div class="footer-float-wrap">
+          <div class="login">
+            <% if user_signed_in? %>
+              <%=current_user.user_name %>
+              <%= link_to '로그아웃', destroy_user_session_path, method: :delete, class: 'login' %>
+            <% else %>
+              <%= link_to '로그인', new_user_session_path, class: 'login' %>
+            <% end %>
+          </div>
           <div class="copyright">Copyright IEMU11 ALL rights reserved.</div>
           <div class="iemu11">IEMU11 since 2011</div>
         </div>

@@ -43,8 +43,13 @@
 
   <br>
   <% if user_signed_in? %>
-    <%= link_to 'New Table', new_table_path, class: 'new-btn' %>
+    <%= link_to '순위표 추가', new_table_path, class: 'new-btn' %>
   <% end %>
+
+  <div class="table-update">
+    업데이트 날짜 <%= @table.updated_at.strftime("%Y.%m.%d") %>
+  </div>
+
 
 
 </div>

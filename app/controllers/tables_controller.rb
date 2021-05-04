@@ -4,6 +4,7 @@ class TablesController < ApplicationController
   # GET /tables or /tables.json
   def index
     @tables = Table.all
+    @table = Table.last
   end
 
   # GET /tables/1 or /tables/1.json

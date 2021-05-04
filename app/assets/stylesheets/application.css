@@ -215,7 +215,7 @@ footer {
     font-weight: 300;
     color: #F8F8FF;
     padding-top: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 .main-footer {
@@ -252,7 +252,7 @@ footer {
     margin-bottom: 20px;
 }
 
-.copyright{
+.copyright {
     float: left;
 }
 
@@ -263,4 +263,8 @@ footer {
 
 .footer-float-wrap {
     overflow: hidden;
+}
+
+.login {
+    color: #0a3c9b;
 }
