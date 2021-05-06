@@ -3,7 +3,7 @@ class VolunteersController < ApplicationController
 
   # GET /volunteers or /volunteers.json
   def index
-    @volunteers = Volunteer.all
+    @volunteers = Volunteer.all.includes(:user)
   end
 
   # GET /volunteers/1 or /volunteers/1.json
