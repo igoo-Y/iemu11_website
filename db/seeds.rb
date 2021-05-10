@@ -9,4 +9,3 @@
 (1..100).each do |t|
   Board.create(title: "title#{t}", content: "content#{t}", user_id: 1)
 end
-
