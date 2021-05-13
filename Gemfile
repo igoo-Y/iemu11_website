@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+gem "image_processing", "~> 1.0"
 gem 'devise'
 gem 'font-awesome-sass', '~> 5.15.1'
 gem 'kaminari'
