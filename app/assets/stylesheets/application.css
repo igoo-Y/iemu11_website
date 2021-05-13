@@ -276,4 +276,13 @@ footer {
 
 .login {
     color: #0a3c9b;
+    text-decoration: none;
+}
+
+.login:link,
+.login:active,
+.login:hover,
+.login:visited {
+    color: #0a3c9b;
+    text-decoration: none;
 }
