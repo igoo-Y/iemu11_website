@@ -27,6 +27,8 @@
     </tbody>
   </table>
 
+  <%= paginate @volunteers %>
+
   <br>
   <% if user_signed_in? %>
     <%= link_to '새 글쓰기', new_volunteer_path, class: 'new-btn' %>

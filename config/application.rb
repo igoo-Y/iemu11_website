@@ -31,5 +31,9 @@ module Iemu11Web
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.i18n.default_locale = :ko
+    config.time_zone = 'Seoul'
   end
 end
+

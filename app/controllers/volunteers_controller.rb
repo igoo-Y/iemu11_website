@@ -4,6 +4,7 @@ class VolunteersController < ApplicationController
   # GET /volunteers or /volunteers.json
   def index
     @volunteers = Volunteer.all.includes(:user)
+    @volunteers = Volunteer.page(params[:page])
   end
 
   # GET /volunteers/1 or /volunteers/1.json

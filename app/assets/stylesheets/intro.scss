@@ -4,7 +4,7 @@
 
 .menu-bar {
   width: 100%;
-  height: 235px;
+  height: 215px;
   border-bottom: 2px solid #1049bb;
   margin-bottom: 60px;
   padding-top: 40px;
@@ -14,14 +14,13 @@
 
 .menu {
   width: 1024px;
-  margin-top: 80px;
+  margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
 }
 
 h1 {
-  font-size: 40px;
-  color: #0a3c9b;
+
 }
 
 h4 {
@@ -35,6 +34,9 @@ h3 {
 .menu-title {
   margin-top: 0;
   margin-bottom: 30px;
+  font-size: 40px;
+  color: #0a3c9b;
+  font-weight: bold;
 }
 
 .menu-list {
