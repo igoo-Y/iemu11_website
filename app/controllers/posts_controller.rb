@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = @board.present? ? @board.posts.all : Post.all
+    @posts = Post.with_rich_text_content_and_embeds
     # @posts = @board.present? ? @board.posts.page(params[:page]).per(5) : Post.page(params[:page]).per(5)
   end
 

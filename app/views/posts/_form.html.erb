@@ -24,13 +24,13 @@
 
     <div class="field">
       <%= form.label :content, '내용' %>
-      <%= form.text_area :content %>
+      <%= form.rich_text_area :content %>
     </div>
 
-    <div class="field">
-      <%= form.label :view_count, '조회수' %>
-      <%= form.number_field :view_count %>
-    </div>
+<!--    <div class="field">-->
+      <%#= form.label :view_count, '조회수' %>
+      <%#= form.number_field :view_count %>
+<!--    </div>-->
 
     <div class="actions">
       <%= form.submit '작성' %>
