@@ -1,5 +1,6 @@
 class TablesController < ApplicationController
   before_action :set_table, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: [:show, :create, :destroy, :new, :edit, :update]
 
   # GET /tables or /tables.json
   def index
