@@ -5,8 +5,8 @@ class IntroController < ApplicationController
   def rules
   end
 
-  def history
-  end
+  # def history
+  # end
 
   def slogan
   end

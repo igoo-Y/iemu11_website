@@ -36,7 +36,7 @@
         <img class="card-img" src="<%=asset_path 'photo2.png' %>" alt="">
       </a>
       <div class="card-post">
-        <a class="card-content" href="/boards/1">신입회원 모집 안내</a>
+        <a class="card-content" href="/posts/<%=@post.id %>"><%= @post.title %></a>
         <a class="card-category" href="/boards/1/posts/51">공지사항</a>
       </div>
     </div>
@@ -60,7 +60,7 @@
         <img class="card-img" src="<%=asset_path 'photo2.png' %>" alt="">
       </a>
       <div class="card-post">
-        <a class="card-content" href="/volunteers">2021 하반기 연탄봉사 안내</a>
+        <a class="card-content" href="/volunteers/<%= @volunteer.id %>"><%= @volunteer.title %></a>
         <a class="card-category" href="/volunteers">봉사활동</a>
       </div>
     </div>
