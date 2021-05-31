@@ -26,7 +26,7 @@
     <tbody>
     <% @tables.each do |table| %>
       <tr>
-        <td><%= link_to table.rank, table %></td>
+        <td><%= link_to table.rank, table, class: "table-show" %></td>
         <td><span class="team-name"><%= table.team_name %></span></td>
         <td><%= table.match_count %></td>
         <td><%= table.point %></td>
@@ -43,11 +43,11 @@
 
   <br>
   <% if user_signed_in? %>
-    <%= link_to '순위표 추가', new_table_path, class: 'new-btn' %>
+    <%= link_to '순위표 업데이트', new_table_path, class: 'new-btn' %>
   <% end %>
 
   <div class="table-update">
-    업데이트 날짜 <%= @table.updated_at.strftime("%Y.%m.%d") %>
+    업데이트 날짜:  <%= @table.updated_at.strftime("%Y.%m.%d") %>
   </div>
 
 

@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= stub active_admin
  */
 
 @import "./actiontext.scss";
@@ -46,13 +47,15 @@ p {
     margin: 0;
 }
 
-.new-btn {
+.new-btn,
+.new-btn:hover {
     display: inline-block;
     float: right;
     background-color: #0a3c9b;
     color: #ebebeb;
     padding: 10px 15px 10px 15px;
     font-size: 12px;
+    text-decoration: none;
 }
 
 .float-wrap {
@@ -225,7 +228,7 @@ footer {
     font-weight: 300;
     color: #F8F8FF;
     padding-top: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 .main-footer {
@@ -246,6 +249,10 @@ footer {
     font-size: 26px;
     color: #ebebeb;
     margin-right: 10px;
+}
+
+.sns-icon:hover {
+    color: #ffffff;
 }
 
 .youtube {
@@ -279,6 +286,7 @@ footer {
 .login {
     color: #0a3c9b;
     text-decoration: none;
+    cursor: default;
 }
 
 .login:link,
@@ -287,4 +295,13 @@ footer {
 .login:visited {
     color: #0a3c9b;
     text-decoration: none;
+}
+
+.page-link {
+    color: #091e58 !important;
+}
+
+.page-item.active .page-link {
+    background-color: #ebebeb !important;
+    border-color: #ebebeb !important;
 }

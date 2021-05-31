@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root 'home#index'
 
   #intro routes
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
   resources :boards do
     resources :posts
   end
+  resources :boards
 
   #volunteer routes
   resources :volunteers

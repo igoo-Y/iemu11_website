@@ -43,6 +43,7 @@
   font-stretch: normal;
   line-height: 1.23;
   letter-spacing: normal;
+  text-align: center;
 }
 
 .rank tr {
@@ -76,6 +77,12 @@
 
 .table-update {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 100;
   margin-bottom: 30px;
+}
+
+.table-show,
+.table-show:hover {
+  color: #2f3133;
+  text-decoration: none;
 }

@@ -1,5 +1,13 @@
 class Volunteer < ApplicationRecord
   belongs_to :user
 
-  paginates_per 5
+  def self.set_dummy_datas
+    30.times do |i|
+      Volunteer.create(
+        title: "title_#{i}",
+        content: "content_#{i}",
+        user_id: 1
+      )
+    end
+  end
 end

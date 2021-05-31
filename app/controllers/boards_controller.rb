@@ -9,7 +9,7 @@ class BoardsController < ApplicationController
 
   # GET /boards/1 or /boards/1.json
   def show
-    @posts = @board.posts.page(params[:page]).per(5)
+    @posts = @board.posts.page(params[:page]).per(15)
   end
 
   # GET /boards/new

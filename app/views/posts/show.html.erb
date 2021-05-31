@@ -3,9 +3,9 @@
 <div class="main-container">
   <h4><%= @post.board.title %></h4>
 
-  <h4 class="post-title">
+  <h1 class="post-title">
     <%= @post.title %>
-  </h4>
+  </h1>
 
   <span class="post-user-name"><%= @post.user_name %></span>
   <span>
@@ -17,7 +17,7 @@
 
   <div class="float-wrap">
     <p class="post-time-view"><%= @post.created_at.strftime("%Y-%m-%d") %> , 조회수 <%= @post.view_count.to_i %></p>
-    <p class="post-list"><%= link_to '목록', board_path(@post.board) %></p>
+    <%= link_to '목록', board_path(@post.board), class: "post-list" %>
   </div>
 
   <div class="post-mid-line"></div>
@@ -26,5 +26,5 @@
     <%= @post.content %>
   </p>
 
-
+  <hr class="post-content-line">
 </div>

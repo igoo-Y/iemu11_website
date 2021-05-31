@@ -9,3 +9,5 @@
 (1..100).each do |t|
   Board.create(title: "title#{t}", content: "content#{t}", user_id: 1)
 end
+
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

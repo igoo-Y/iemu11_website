@@ -37,8 +37,9 @@ td a {
 
 .post-title {
   text-align: center;
-  font-size: 28px;
-  margin-top: 50px;
+  color: #091e58;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .post-time-view {
@@ -67,6 +68,14 @@ td a {
   float: right;
 }
 
+.post-list:hover {
+  color: #2E2F30;
+}
+
 .post-content {
   margin-bottom: 50px;
+}
+
+.post-content-line {
+  margin-bottom: 300px;
 }

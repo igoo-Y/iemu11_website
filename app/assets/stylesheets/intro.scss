@@ -54,6 +54,10 @@ h3 {
   text-decoration: none;
 }
 
+.menu-list-item:hover {
+  color: #2E2F30;
+}
+
 .intro-img {
   border: 1px solid #ebebeb;
   height: 500px;
@@ -143,7 +147,12 @@ h3 {
   background-color: #0a3c9b;
   color: #ebebeb;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+#sponsor {
+  margin-top: 200px;
 }
 
 .op-sponsor {
@@ -159,7 +168,7 @@ h3 {
   width: 100%;
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
-  margin-bottom: 100px;
+  margin-bottom: 300px;
 }
 
 .op-list {
